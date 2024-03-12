@@ -1,0 +1,50 @@
+direction: right
+
+DirectionAdmin: {
+  shape: sql_table
+  nom.constraint: ID
+  nomPrésident·e
+}
+
+Département: {
+  shape: sql_table
+  nom.constraint: ID
+  location
+}
+
+Service: {
+  shape: sql_table
+  nom.constraint: ID
+  responsable
+}
+
+Dossier: {
+  shape: sql_table
+  num.constraint: ID
+  titre
+  dateEnregistrement
+}
+
+Employé·e: {
+  shape: sql_table
+  num.constraint: ID
+  nom
+  addresse
+}
+
+DirectionAdmin -- dépend: 1-N
+dépend -- Département: 1-1
+
+Département -- est découpé: 1-N
+est découpé -- Service: 1-1
+
+Service -- a la charge: 1-N
+a la charge -- Dossier: 1-1
+
+Employé·e -- travaille: 1-1
+travaille -- Service: 1-N
+
+dépend.shape: hexagon
+est découpé.shape: hexagon
+a la charge.shape: hexagon
+travaille.shape: hexagon

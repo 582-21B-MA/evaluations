@@ -1,0 +1,63 @@
+Voyage: {
+    shape: sql_table
+    dateDépart
+    heureDépart
+}
+
+Train: {
+    shape: sql_table
+    numTrain.constraint: ID
+    dépôtOrigine
+}
+
+Ligne: {
+    shape: sql_table
+    codeLigne.constraint: ID
+    dateMiseEnActivité
+}
+
+Agent·e: {
+    shape: sql_table
+    numAgent·e.constraint: ID
+    nom
+    adresse
+}
+
+Section: {
+    shape: sql_table
+    longueur
+}
+
+Station: {
+    shape: sql_table
+    nom.constraint: ID
+    commune
+}
+
+Train -- effectue: 0-N
+effectue -- Voyage: 1-1
+
+Voyage -- suit: 1-1
+suit -- ligne: 0-N
+
+Agent·e -- conduit: 0-N
+conduit -- Voyage: 1-1
+
+Section -- forme: 1-1
+forme -- Ligne: 1-N
+
+Section -- part: 1-1
+part -- Station: 1-N
+Section -- arrive: 1-1
+arrive -- Station: 1-N
+
+Agent·e -- dirige: 0-N
+dirige -- Station: 1-1
+
+effectue.shape: hexagon
+suit.shape: hexagon
+conduit.shape: hexagon
+forme.shape: hexagon
+part.shape: hexagon
+arrive.shape: hexagon
+dirige.shape: hexagon

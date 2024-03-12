@@ -1,0 +1,46 @@
+direction: right
+
+Ouvrage: {
+    shape: sql_table
+    numId.constraint: ID
+    titre
+    éditeur·rice
+}
+
+Auteur·rice: {
+    shape: sql_table
+    nom
+}
+
+Mot-clé: {
+    shape: sql_table
+    valeur.constraint: ID
+}
+
+Exemplaire: {
+    shape: sql_table
+    num.constraint: ID
+    position
+    dateAchat
+}
+
+Emprunteur·se: {
+    shape: sql_table
+    numEmpr.constraint: ID
+    nom
+    adresse
+}
+
+Mot-clé -- décrit: 0-N
+décrit -- Ouvrage: 0-N
+Ouvrage -- dispose: 1-N
+Auteur·rice -- écrit: 1-N
+écrit -- Ouvrage: 0-N
+dispose -- Exemplaire: 1-1
+Emprunteur·se -- emprunte: 0-N
+emprunte -- Exemplaire: 0-1
+
+décrit.shape: hexagon
+dispose.shape: hexagon
+emprunte.shape: hexagon
+écrit.shape: hexagon
