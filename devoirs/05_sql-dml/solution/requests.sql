@@ -10,7 +10,7 @@ WHERE  year < 1900;
 -- 3.
 SELECT title, year_of_publication
 FROM   Books
-WHERE  year <> 2006;
+WHERE  year_of_publication <> 2006;
 
 -- 4.
 SELECT title, country_of_origin
