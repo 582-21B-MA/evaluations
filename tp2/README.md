@@ -3,7 +3,8 @@
 Le but de ce travaille est d'évaluer votre compréhension du langage de
 définition et de manipulation de données SQL. Pour ce faire, il vous est
 demandé de créer une base de données à propos des 151 premières créatures
-de la franchise Pokémon.
+de la franchise Pokémon. Vous trouverez les informations nécessaires à
+l'adresse suivante : https://pokemondb.net/pokedex/national#gen-1.
 
 ## Exigences
 
@@ -39,7 +40,7 @@ questions suivantes :
 7.  Quel est le nom et la description des attaques très efficaces et
     contre les Pokémon de type « Grass » et contre ceux de type 
     « Steel » ?
-8.  Quelle est la force moyenne des attaques du Pokemon nommé 
+8.  Quelle est la force moyenne des attaques du Pokemon nommé
     « Snorlax » ?
 9.  Listez le nom des attaques ainsi que leur force en ordre croissant
     de leur force et de leur nom.
